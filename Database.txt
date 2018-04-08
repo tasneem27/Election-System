@@ -1,0 +1,65 @@
+create table Login(Username varchar(20) primary key,Password varchar(20) NOT NULL,Type varchar(20));
+
+create table VoterInfo(Username varchar(20) primary key,Name varchar(30), Email varchar(30),Address varchar(30),Phno bigint,age integer, Voted varchar(1));
+
+create table CandidateInfo(Username varchar(20),Name varchar(30), Email varchar(30),Address varchar(30),Phno bigint,Party varchar(20), age integer, primary key(Username,Party));
+
+create table VoteLog(Username varchar(20),Party varchar(20),foreign key(Username,Party) references CandidateInfo(Username,Party),Votes integer);
+
+create table ElectionDetails(ElectionName varchar(20) primary key, enddate date,maxcandi integer, startdate date);
+
+
+
+insert into ElectionDetails values("Mayor Elections", "2016-10-30", 7, "2016-09-01");
+
+insert into VoterInfo values("nyataroffsh", "Tanya Shroff", "tanya24.97@gmail.com","YN Road, Indore", 9826181611, 19,"N");
+insert into VoterInfo values("atnsmeelgihtwala", "Tasneem Lightwala", "tasneemxx@gmail.com","Saket, Indore", 9828367611, 20,"N");
+insert into VoterInfo values("uidtidoshain", "Uditi Sodhani", "suditi@gmail.com","Jail road, Mhow", 9263628146, 19,"N");
+insert into VoterInfo values("ivinawsjiina", "Vini Sawjiani", "svini@yahoo.com","Khatiwala Tank, Indore", 9173615372, 21,"N");
+insert into VoterInfo values("hstriusaait", "Shruti Asati", "shruti1@gmail.com","Zanjeerwala, Indore", 92384826483, 19,"N");
+insert into VoterInfo values("sahinkaajian", "Anshika Jain", "ans@gmail.com","BCM heights, Indore", 9638153825, 22,"N");
+insert into VoterInfo values("srhuithkuhrnaa", "Shruthi Khurana", "shruthikhurana@gmail.com","SGSISTS, Indore", 9618271832, 23,"N");
+insert into VoterInfo values("iratahrabmsnihg", "Ritambhara Singh", "rsingh@gmail.com","Krail, Indore", 9917368238, 19,"N");
+insert into VoterInfo values("ratihbavedod", "Pratibha Dodve", "pdodve@gmail.com","Jail road, Indore", 9918371348, 21,"N");
+insert into VoterInfo values("vyabhamaver", "Bhavya Verma", "verma96@gmail.com","Vijay Nagar, Indore", 9928741848, 25,"N");
+insert into VoterInfo values("ruthikaedghe", "Kruthika Hedge", "krux@gmail.com","Central, Indore", 9872819361, 50,"N");
+insert into VoterInfo values("haviboshdi", "Bhavi Doshi", "bhavid@gmail.com","Rani Sati, Indore", 9719374193, 38,"N");
+insert into VoterInfo values("ishnntathan", "Nishant Nath", "nish96@gmail.com","Prapti nagar, Indore", 9882839641, 40,"N");
+insert into VoterInfo values("nitvionkpseh", "Vinit Ponkshe", "vinitpx@gmail.com","C21, Indore", 9917371938, 40,"N");
+insert into VoterInfo values("keinvorgege", "Kevin George", "kev@gmail.com","Malwa Mill, Indore", 9918379173, 46,"N");
+
+insert into CandidateInfo values("kruthikahedge", "Kruthika Hedge", "krux@gmail.com","Central, Indore", 9872819361, "BJP",50);
+insert into CandidateInfo values("bhavidoshi", "Bhavi Doshi", "bhavid@gmail.com","Rani Sati, Indore", 9719374193, "Congress",38);
+insert into CandidateInfo values("nishantnath", "Nishant Nath", "nish96@gmail.com","Prapti nagar, Indore", 9882839641, "Aam Aadmi",40);
+insert into CandidateInfo values("vinitponkshe", "Vinit Ponkshe", "vinitpx@gmail.com","C21, Indore", 9917371938, "Janta",40);
+insert into CandidateInfo values("kevingeorge", "Kevin George", "kev@gmail.com","Malwa Mill, Indore", 9918379173, "NCP",46);
+
+insert into Login values("nyataroffsh", "tanya", "V");
+insert into Login values("atnsmeelgihtwala", "tasneem", "V");
+insert into Login values("uidtidoshain", "uditi", "V");
+insert into Login values("ivinawsjiina", "vini", "V");
+insert into Login values("hstriusaait", "shruti", "V");
+insert into Login values("sahinkaajian", "anshika", "V");
+insert into Login values("srhuithkuhrnaa", "shruthi", "V");
+insert into Login values("iratahrabmsnihg", "ritambhara", "V");
+insert into Login values("ratihbavedod", "pratibha", "V");
+insert into Login values("vyabhamaver", "bhavya", "V");
+insert into Login values("ruthikaedghe", "kruthika", "V");
+insert into Login values("haviboshdi", "bhavi", "V");
+insert into Login values("ishnntathan", "nishant", "V");
+insert into Login values("nitvionkpseh", "vinit", "V");
+insert into Login values("keinvorgege", "kevin", "V");
+insert into Login values("kruthikahedge", "kruthika", "C");
+insert into Login values("bhavidoshi", "bhavi", "C");
+insert into Login values("nishantnath", "nishant", "C");
+insert into Login values("vinitponkshe", "vinit", "C");
+insert into Login values("kevingeorge", "kevin", "C");
+insert into Login values("jessie", "tanya", "A");
+insert into Login values("walter", "tasneem", "A");
+
+insert into VoteLog values("kruthikahedge", "BJP", 2);
+insert into VoteLog values("bhavidoshi", "Congress", 3);
+insert into VoteLog values("nishantnath", "Aam Aadmi", 1);
+insert into VoteLog values("vinitponkshe", "Janta", 2);
+insert into VoteLog values("kevingeorge", "NCP", 1);
+

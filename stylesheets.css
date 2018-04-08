@@ -1,0 +1,105 @@
+h3{
+	position:relative;
+	top:30px;
+	left:1100px;
+	color:#8ff442;
+	font-size:25px;
+}
+
+h1{
+	text-align:center;
+	color:#0E6655;
+	font-family:arial;
+	font-size:40px;
+	position:relative;
+	top:45px;
+}
+
+body{
+	background-image:url(election-box.jpg);
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+
+ul{
+	list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    background-color:pink;
+	position:relative;
+	top:70px;
+	
+	
+}
+
+li {
+    float: left;
+}
+
+li a {
+	font-size:25px;
+    	display: block;
+	background-color:pink;
+    	color: green;
+    	text-align: center;
+    	text-decoration: none;
+	cursor:pointer;
+	padding: 20px 70px;
+}
+
+
+
+li a:hover {
+    background-color:dodgerblue;
+	color: floralwhite;
+}
+
+li a:active {
+	background-color:orange;
+}
+
+div{
+	position:relative;
+	top:60px;
+	background-color:white;	
+	color:blue;
+	font-size:20px;
+	font-family:arial;
+	padding :10px;
+	margin-top: 10px;
+	 opacity:0.7;
+}
+
+.brag
+{
+	float:left;
+	position:relative;
+	color: black;
+	width: 100px;
+}
+.title
+{
+	margin-bottom:0px;
+	color:green;
+	font-family:Constantia;
+}
+
+.title1
+{
+	margin-bottom:0px;
+	color:green;
+	font-family:Constantia;
+	font-size: 150%;
+}
+
+.content
+{
+	margin-top:0px;
+	color:#145A32;
+	font-family:Constantia;
+}
+
+table{
+	border:1px;
+	solid red;
+}
